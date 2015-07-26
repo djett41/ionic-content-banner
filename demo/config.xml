@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.devinjett.ionic.content.banner" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Ionic Content Banner</name>
+  <description>
+    A content banner directive for Ionic apps that animates in on the active ion-content
+  </description>
+  <author email="djett41@gmail.com">
+    Devin Jett
+  </author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="3000"/>
+  <platform name="ios">
+    <preference name="TopActivityIndicator" value="white"/>
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarBackgroundColor" value="#fff"/>
+    <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
+  </platform>
+</widget>

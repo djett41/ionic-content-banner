@@ -1,0 +1,23 @@
+<ion-view view-title="Ionic Content Banner">
+
+  <ion-nav-buttons side="primary">
+    <button class="button button-clear" ng-click="showInfoBanner()">INFO</button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="secondary">
+    <button class="button button-clear" ng-click="showErrorBanner()">ERROR</button>
+  </ion-nav-buttons>
+
+  <ion-content direction="y" scrollbar-y="false">
+
+    <ion-refresher pulling-icon="ion-arrow-down-b" on-refresh="refreshItems()">
+    </ion-refresher>
+
+    <ion-list>
+      <ion-item collection-repeat="item in items" >
+        <p>{{item.text}}</p>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+
+</ion-view>

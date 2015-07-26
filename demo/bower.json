@@ -1,0 +1,10 @@
+{
+  "name": "Demo",
+  "author": "Devin Jett <djett41@gmail.com>",
+  "private": "false",
+  "devDependencies": {},
+  "dependencies": {
+    "ionic": "driftyco/ionic-bower#1.0.1",
+    "angular": "~1.3.13"
+  }
+}
