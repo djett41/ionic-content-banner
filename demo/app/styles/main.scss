@@ -6,4 +6,6 @@
 
 @import
   "../../bower_components/ionic/scss/ionic",
+  //For this demo I'm pointing to this plugins scss, but you will want to point to the following in a real scenario
+  // ../../bower_components/ionic-content-banner/scss/ionic.content.banner
   "../../../scss/ionic.content.banner";
