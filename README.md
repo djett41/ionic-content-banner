@@ -10,9 +10,8 @@
 [![Ionic Content Banner](http://img.youtube.com/vi/O_18dIEbZXM/0.jpg)](http://www.youtube.com/watch?v=O_18dIEbZXM)
 
 
-## Demo
+## Demo App
 
-- [View Demo](http://makeagif.com/i/EZ-klS)
 - Download from [Ionic View](http://view.ionic.io/) with appId: `5445a4a4`
 
 View the demo application code at demo/ for an example on how to use the content banner.  To run the demo
