@@ -7,8 +7,8 @@
  - [Usage](#usage)
  - [Screenshots](#screenshots)
 
+[![Ionic Content Banner](http://img.youtube.com/vi/O_18dIEbZXM/0.jpg)](http://www.youtube.com/watch?v=O_18dIEbZXM)
 
-<img src="demo/resources/screenshots/ionic-content-banner.gif" />
 
 ## Demo
 
