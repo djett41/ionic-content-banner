@@ -7,15 +7,17 @@
  - [Usage](#usage)
  - [Screenshots](#screenshots)
 
+## Demo
+
+- Watch the Demo video below
+
 [![Ionic Content Banner](http://img.youtube.com/vi/O_18dIEbZXM/0.jpg)](http://www.youtube.com/watch?v=O_18dIEbZXM)
 
 
-## Demo App
+- Download the Demo app on [Ionic View](http://view.ionic.io/) with appId: `5445a4a4`
+- Run the demo source code by cloning the ionic-content-banner repo, navigating to /demo and running the following
 
-- Download from [Ionic View](http://view.ionic.io/) with appId: `5445a4a4`
-
-View the demo application code at demo/ for an example on how to use the content banner.  To run the demo
-clone the ionic-content-banner repo, then navigate to the demo/ directory and run the following
+Run the following ommands:
 
     npm install
     bower install
