@@ -1,6 +1,3 @@
-# ionic-content-banner
-An informational content banner for Ionic applications
-
 #Ionic Content Banner
 >A Facebook style info/error content banner for the Ionic Framework
 
@@ -10,9 +7,10 @@ An informational content banner for Ionic applications
  - [Usage](#usage)
  - [Screenshots](#screenshots)
 
-## Demo
 
-<img src="demo/resources/screenshots/ionic-content-banner.gif" align="left" height="500" width="500" />
+<img src="demo/resources/screenshots/ionic-content-banner.gif" />
+
+## Demo
 
 - [View Demo](http://makeagif.com/i/EZ-klS)
 - Download from [Ionic View](http://view.ionic.io/) with appId: `5445a4a4`
