@@ -92,6 +92,10 @@ A service you can inject in your controller to show the Content Banner
   - `{number=}` `interval`
 
     Number of milliseconds between text value changes.  Default value is 7000ms (7 seconds).
+    
+  - `{number=}` `autoClose`
+  
+    Number of milliseconds before the content banner automatically closes.  This option is disabled by default.  
 
   - `{boolean=}` `cancelOnStateChange`
 

@@ -62,7 +62,8 @@
             interval: 7000,
             type: 'info',
             $deregisterBackButton: angular.noop,
-            closeOnStateChange: true
+            closeOnStateChange: true,
+            autoClose: null
           }, opts);
 
           // Compile the template
@@ -110,6 +111,12 @@
             ionic.requestAnimationFrame(function () {
               $timeout(function () {
                 element.addClass('content-banner-in');
+                //automatically close if autoClose is configured
+                if (scope.autoClose) {
+                  $timeout(function () {
+                    scope.close();
+                  }, scope.autoClose, false);
+                }
               }, 20, false);
             });
           };
