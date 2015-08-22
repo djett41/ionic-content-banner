@@ -43,6 +43,7 @@ describe('Ionic Content Banner Service', function() {
     expect(scope.text).toBeUndefined();
     expect(scope.interval).toBe(7000);
     expect(scope.closeOnStateChange).toBe(true);
+    expect(scope.autoClose).toBe(null);
   }));
 
   it('should set custom options on scope', inject(function() {
@@ -56,6 +57,7 @@ describe('Ionic Content Banner Service', function() {
       $deregisterBackButton: backButton,
       text: ['firstMessage', 'secondMessage'],
       interval: 10000,
+      autoClose: 7000,
       closeOnStateChange: false
     });
 
@@ -65,6 +67,7 @@ describe('Ionic Content Banner Service', function() {
     expect(scope.text).toEqual(text);
     expect(scope.interval).toBe(10000);
     expect(scope.closeOnStateChange).toBe(false);
+    expect(scope.autoClose).toBe(7000);
   }));
 
   it('show should add class on show', inject(function() {

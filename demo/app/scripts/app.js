@@ -65,6 +65,7 @@ angular.module('Demo', ['ionic', 'jett.ionic.content.banner'])
         contentBannerInstance = $ionicContentBanner.show({
           text: ['System Unavailable', 'Please try again later.'],
           interval: 3000,
+          autoClose: 10000,
           type: bannerType,
           transition: transition || 'vertical'
         });
