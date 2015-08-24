@@ -13,6 +13,7 @@
             var stopInterval;
 
             $scope.currentIndex = 0;
+            $scope.href = $attrs.href || '';
 
             if ($scope.text.length > 1) {
               stopInterval = $interval(function () {
@@ -28,9 +29,9 @@
             });
           },
           template:
-          '<div class="content-banner-text-wrapper">' +
+          '<a class="content-banner-text-wrapper" href="{{href}}">' +
             '<div ng-repeat="item in text track by $index" ng-class="{active: $index === currentIndex}" class="content-banner-text" ng-bind="item"></div>' +
-          '</div>' +
+          '</a>' +
           '<button class="content-banner-close button button-icon icon {{::icon}}" ng-click="close()"></button>'
         };
       }]);
