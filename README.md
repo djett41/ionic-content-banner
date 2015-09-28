@@ -80,9 +80,10 @@ A service you can inject in your controller to show the Content Banner
 
   - `{string=}` `type`
 
-    The type of banner to show.  Supported types are `info` and `error`; defaults to `info`. The content banner will
-    create a css class `content-banner-{typeVal}`, so you can add a custom type value and then a custom css class to
-    match if you would like to create your own type.
+    The type of banner to show.  Supported types are `info`, `loading` and `error`; defaults to `info`. The content
+    banner will create a css class `content-banner-{typeVal}`, so you can add a custom type value and then a custom
+    css class to match if you would like to create your own type. Setting type as `loading` will add an
+    [`<ion-spinner>`](http://ionicframework.com/docs/api/directive/ionSpinner/) to the banner. 
 
   - `[String]` `text`
 
