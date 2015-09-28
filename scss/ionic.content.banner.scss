@@ -31,6 +31,13 @@ $content-banner-loading-bg: #333   !default;
   &.loading {
     background-color: $content-banner-loading-bg;
   }
+  .spinner svg {
+    width: 18px;
+    height: 18px;
+    left: 17px;
+    position: absolute;
+    top: 7px;
+  }
   .content-banner-text {
     @include transition(opacity 500ms linear) ;
     position: absolute;

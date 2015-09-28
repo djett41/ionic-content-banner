@@ -63,7 +63,9 @@
             type: 'info',
             $deregisterBackButton: angular.noop,
             closeOnStateChange: true,
-            autoClose: null
+            autoClose: null,
+            spinnerIcon: null,
+            spinnerClass: 'spinner-light',
           }, opts);
 
           // Compile the template
