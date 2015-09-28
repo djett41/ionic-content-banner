@@ -106,7 +106,7 @@ angular.module('jett.ionic.content.banner', ['ionic']);
             closeOnStateChange: true,
             autoClose: null,
             spinnerIcon: null,
-            spinnerClass: 'spinner-light',
+            spinnerClass: 'spinner-light'
           }, opts);
 
           // Compile the template
