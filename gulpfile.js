@@ -33,8 +33,9 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('sass', function(done) {
-  gulp.src('./scss/ionic.content.banner.scss')
+  gulp.src('./scss/main.scss')
     .pipe(sass({ errLogToConsole: true }))
+    .pipe(rename({  basename: 'ionic.content.banner' }))
     .pipe(gulp.dest(paths.dist))
     .pipe(minifyCss({ keepSpecialComments: 0 }))
     .pipe(rename({ extname: '.min.css' }))

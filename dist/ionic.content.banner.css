@@ -5,7 +5,8 @@
   line-height: 30px;
   position: absolute;
   top: 0;
-  opacity: 0.7; }
+  opacity: 0.7;
+  z-index: 13; }
   .content-banner.error {
     background-color: red; }
   .content-banner.info {

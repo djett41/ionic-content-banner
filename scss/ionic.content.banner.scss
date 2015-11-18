@@ -1,6 +1,4 @@
 // Content Banner
-@import "../bower_components/ionic/scss/mixins";
-@import "../bower_components/ionic/scss/variables";
 // Variables
 //-----------------------------------
 
@@ -20,6 +18,7 @@ $content-banner-info-bg: #333   !default;
   position: absolute;
   top: 0;
   opacity: $content-banner-opacity;
+  z-index: $z-index-loading;
 
   &.error {
     background-color: $content-banner-error-bg;
