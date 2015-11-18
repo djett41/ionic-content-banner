@@ -95,6 +95,12 @@ angular.module('jett.ionic.content.banner', ['ionic']);
           cacheIndex ++;
         }
 
+        /**
+         * @ngdoc method
+         * @name $ionicContentBanner#closeAll
+         * @description
+         * Closes all current banners
+         */
         function closeAll(){
           $timeout(function(){
             angular.forEach(bannerCache, function(scope){
@@ -152,6 +158,7 @@ angular.module('jett.ionic.content.banner', ['ionic']);
                 body = stateChangeListenDone = null;
               }, 400);
             });
+
             delete bannerCache[scope.bannerCacheIndex];
 
             scope.$deregisterBackButton();
@@ -174,7 +181,7 @@ angular.module('jett.ionic.content.banner', ['ionic']);
                     scope.close();
                   }, scope.autoClose, false);
                 }
-              }, 20, false);
+              }, 20);
             });
           };
 

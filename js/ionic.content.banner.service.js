@@ -118,6 +118,7 @@
                 body = stateChangeListenDone = null;
               }, 400);
             });
+
             delete bannerCache[scope.bannerCacheIndex];
 
             scope.$deregisterBackButton();
@@ -140,7 +141,7 @@
                     scope.close();
                   }, scope.autoClose, false);
                 }
-              }, 20, false);
+              }, 20);
             });
           };
 
