@@ -56,6 +56,8 @@ angular.module('jett.ionic.content.banner', ['ionic']);
       '$timeout',
       '$ionicPlatform',
       function ($document, $rootScope, $compile, $timeout, $ionicPlatform) {
+        var cacheIndex = 0,
+          bannerCache = {};
 
         function isActiveView (node) {
           // walk up the child-parent node chain until we get to the root or the BODY
@@ -85,6 +87,20 @@ angular.module('jett.ionic.content.banner', ['ionic']);
           return Array.prototype.slice.call(views).filter(function (view) {
             return isActiveView(view);
           })[0];
+        }
+
+        function cacheBanner(scope){
+          bannerCache[cacheIndex] = scope;
+          scope.bannerCacheIndex = cacheIndex;
+          cacheIndex ++;
+        }
+
+        function closeAll(){
+          $timeout(function(){
+            angular.forEach(bannerCache, function(scope){
+              scope.close();
+            });
+          });
         }
 
         /**
@@ -136,6 +152,7 @@ angular.module('jett.ionic.content.banner', ['ionic']);
                 body = stateChangeListenDone = null;
               }, 400);
             });
+            delete bannerCache[scope.bannerCacheIndex];
 
             scope.$deregisterBackButton();
             stateChangeListenDone();
@@ -169,11 +186,13 @@ angular.module('jett.ionic.content.banner', ['ionic']);
           // Expose the scope on $ionContentBanner's return value for the sake of testing it.
           scope.close.$scope = scope;
 
+          cacheBanner(scope);
           return scope.close;
         }
 
         return {
-          show: contentBanner
+          show: contentBanner,
+          closeAll: closeAll
         };
       }]);
 
