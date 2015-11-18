@@ -100,6 +100,11 @@ A service you can inject in your controller to show the Content Banner
   - `{boolean=}` `cancelOnStateChange`
 
     Whether to cancel the content banner when navigating to a new state.  Default value is true.
+    
+  - `{string=}` `position`
+
+    Where the banner shows.  Supported positions are `top` and `bottom`; defaults to `top`.
+
 
 ## Screenshots
 
