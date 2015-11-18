@@ -85,11 +85,20 @@
             type: 'info',
             $deregisterBackButton: angular.noop,
             closeOnStateChange: true,
-            autoClose: null
+            autoClose: null,
+            position: null
           }, opts);
 
           // Compile the template
-          var classes = 'content-banner ' + scope.type + ' content-banner-transition-' + scope.transition;
+          var transitionClass = 'content-banner-transition-' + scope.transition;
+          var classes = 'content-banner ' + scope.type;
+          if ( scope.position === 'bottom' ){
+            classes += ' content-banner-bottom';
+            if ( scope.transition === 'vertical' ){
+              transitionClass += '-bottom';
+            }
+          }
+          classes += ' ' + transitionClass;
           var element = scope.element = $compile('<ion-content-banner class="' + classes + '"></ion-content-banner>')(scope);
           var body = $document[0].body;
 

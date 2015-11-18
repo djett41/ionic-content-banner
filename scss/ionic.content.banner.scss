@@ -1,5 +1,6 @@
 // Content Banner
-
+@import "../bower_components/ionic/scss/mixins";
+@import "../bower_components/ionic/scss/variables";
 // Variables
 //-----------------------------------
 
@@ -25,6 +26,10 @@ $content-banner-info-bg: #333   !default;
   }
   &.info {
     background-color: $content-banner-info-bg;
+  }
+  &.content-banner-bottom {
+    top: initial;
+    bottom: 0;
   }
   .content-banner-text {
     @include transition(opacity 500ms linear) ;
@@ -58,6 +63,11 @@ $content-banner-info-bg: #333   !default;
 .content-banner-transition-vertical {
   @include transition-transform(linear 250ms);
   @include translate3d(0, -100%, 0);
+}
+
+.content-banner-transition-vertical-bottom {
+  @include transition-transform(linear 250ms);
+  @include translate3d(0, 100%, 0);
 }
 
 .content-banner-transition-fade {
