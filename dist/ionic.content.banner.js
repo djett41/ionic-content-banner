@@ -146,7 +146,10 @@ angular.module('jett.ionic.content.banner', ['ionic']);
               return;
             }
 
-            getActiveView(body).querySelector('.scroll-content').appendChild(element[0]);
+            var scrollContents = getActiveView(body).querySelectorAll('.scroll-content')
+            Array.prototype.slice.call(scrollContents).filter(function (content) {
+              return isActiveView(content)
+            })[0].appendChild(element[0])
 
             ionic.requestAnimationFrame(function () {
               $timeout(function () {
