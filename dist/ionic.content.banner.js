@@ -73,6 +73,12 @@ angular.module('jett.ionic.content.banner', ['ionic']);
         }
 
         function getActiveView (body) {
+          // check if there is an active modal
+          var modal = body.querySelector('ion-modal-view[class*="ng-enter-active"]');
+          if (modal != null) {
+            return modal;
+          }
+
           // get the candidate active views
           var views = body.querySelectorAll('ion-view[nav-view="active"]');
 
