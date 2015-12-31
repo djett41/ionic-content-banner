@@ -32,7 +32,7 @@ angular.module('jett.ionic.content.banner', ['ionic']);
           '<div class="content-banner-text-wrapper">' +
             '<div ng-repeat="item in text track by $index" ng-class="{active: $index === currentIndex}" class="content-banner-text" ng-bind="item"></div>' +
           '</div>' +
-          '<button class="content-banner-close button button-icon icon {{::icon}}" ng-click="close()"></button>'
+          '<button class="content-banner-close button button-icon icon {{::icon}} ng-hide" ng-show="isShowClose" ng-click="close()"></button>'
         };
       }]);
 
@@ -103,7 +103,8 @@ angular.module('jett.ionic.content.banner', ['ionic']);
             type: 'info',
             $deregisterBackButton: angular.noop,
             closeOnStateChange: true,
-            autoClose: null
+            autoClose: null,
+            isShowClose: true
           }, opts);
 
           // Compile the template
@@ -124,6 +125,9 @@ angular.module('jett.ionic.content.banner', ['ionic']);
           scope.close = function() {
             if (scope.removed) {
               return;
+            }
+            if (scope.callback) {
+              scope.callback();
             }
             scope.removed = true;
 
