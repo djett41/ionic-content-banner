@@ -9,7 +9,7 @@
 
 ## Demo
 
-- Download my app SportScoop on iOS/Android to see it live!! (turn wifi off to force network error which shows banner)
+- Download my app **SportScoop** on iOS/Android to see it live!! (turn wifi off to force network error which shows banner)
 
 [Web Demo](http://www.sportscoopapp.com) <br>
 [iOS](https://itunes.apple.com/us/app/sportscoop/id1035164619?mt=8) <br>
