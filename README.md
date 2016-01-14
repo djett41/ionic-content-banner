@@ -9,6 +9,12 @@
 
 ## Demo
 
+- Download my app SportScoop on iOS/Android to see it live!! (turn wifi off to force network error which shows banner)
+
+[Web Demo](http://www.sportscoopapp.com) <br>
+[iOS](https://itunes.apple.com/us/app/sportscoop/id1035164619?mt=8) <br>
+[Android](https://play.google.com/store/apps/details?id=com.coseur.sportscoop)
+
 - Watch the Demo video below
 
 [![Ionic Content Banner](http://img.youtube.com/vi/O_18dIEbZXM/0.jpg)](http://www.youtube.com/watch?v=O_18dIEbZXM)
