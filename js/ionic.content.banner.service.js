@@ -34,7 +34,7 @@
 
         function getActiveView (body) {
           // get the candidate active views
-          var views = body.querySelectorAll('ion-view[nav-view="active"]');
+          var views = body.querySelectorAll('[nav-view="active"][class="pane"]');
 
           // only one candidate, so we just take it
           if (views.length === 1) {
