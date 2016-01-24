@@ -12,6 +12,14 @@
   background-color: red; }
 .content-banner.info {
   background-color: #333; }
+.content-banner.loading {
+  background-color: #333; }
+.content-banner .spinner svg {
+  width: 18px;
+  height: 18px;
+  left: 17px;
+  position: absolute;
+  top: 7px; }
 .content-banner .content-banner-text {
   -webkit-transition: opacity 500ms linear;
   transition: opacity 500ms linear;

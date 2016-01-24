@@ -7,6 +7,8 @@ $content-banner-height: 30px    !default;
 $content-banner-opacity: .7     !default;
 $content-banner-error-bg: red   !default;
 $content-banner-info-bg: #333   !default;
+$content-banner-loading-bg: #333   !default;
+
 
 // Styles
 //-----------------------------------
@@ -25,6 +27,16 @@ $content-banner-info-bg: #333   !default;
   }
   &.info {
     background-color: $content-banner-info-bg;
+  }
+  &.loading {
+    background-color: $content-banner-loading-bg;
+  }
+  .spinner svg {
+    width: 18px;
+    height: 18px;
+    left: 17px;
+    position: absolute;
+    top: 7px;
   }
   .content-banner-text {
     @include transition(opacity 500ms linear) ;

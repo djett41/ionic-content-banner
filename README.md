@@ -26,7 +26,7 @@ Run the following ommands:
     npm install
     bower install
     gulp
-    
+
 ## Setup
 
 #### Install
@@ -36,7 +36,7 @@ Run the following ommands:
 #### JS/CSS Imports (index.html)
 Include the following JavaScript/CSS file imports in your index.html.  Remember to import the ionic libraries first!
 The example below assumes your 3rd party bower dependencies are located in the default bower_components folder.
-    
+
     <link rel="stylesheet" href="bower_components/ionic-content-banner/dist/ionic.content.banner.css">
     <script src="bower_components/ionic-content-banner/dist/ionic.content.banner.js"></script>
 
@@ -84,9 +84,10 @@ A service you can inject in your controller to show the Content Banner
 
   - `{string=}` `type`
 
-    The type of banner to show.  Supported types are `info` and `error`; defaults to `info`. The content banner will
-    create a css class `content-banner-{typeVal}`, so you can add a custom type value and then a custom css class to
-    match if you would like to create your own type.
+    The type of banner to show.  Supported types are `info`, `loading` and `error`; defaults to `info`. The content
+    banner will create a css class `content-banner-{typeVal}`, so you can add a custom type value and then a custom
+    css class to match if you would like to create your own type. Setting type as `loading` will add an
+    [`<ion-spinner>`](http://ionicframework.com/docs/api/directive/ionSpinner/) to the banner.
 
   - `[String]` `text`
 
@@ -96,14 +97,25 @@ A service you can inject in your controller to show the Content Banner
   - `{number=}` `interval`
 
     Number of milliseconds between text value changes.  Default value is 7000ms (7 seconds).
-    
+
   - `{number=}` `autoClose`
-  
+
     Number of milliseconds before the content banner automatically closes.  This option is disabled by default.  
 
   - `{boolean=}` `cancelOnStateChange`
 
     Whether to cancel the content banner when navigating to a new state.  Default value is true.
+
+  - `{string=}` `spinnerIcon`
+
+    The spinner icon to show. Only applies when spinner `type` is set to `loading`. See
+    [`<ion-spinner>` docs](http://ionicframework.com/docs/api/directive/ionSpinner/). By default it will it will use
+    the appropriate spinner for the platform on which it's running.
+
+  - `{string=}` `spinnerClass`
+
+     Only applies when spinner `type` is set to `loading`. Class to apply to loading spinner. See
+     [`<ion-spinner>` docs](http://ionicframework.com/docs/api/directive/ionSpinner/). Default value is `spinner-light`
 
 ## Screenshots
 
@@ -114,5 +126,3 @@ A service you can inject in your controller to show the Content Banner
 
 <img src="demo/resources/screenshots/android1.png" align="left" height="500" width="281" >
 <img src="demo/resources/screenshots/android2.png" align="left" height="500" width="281" >
-
-
