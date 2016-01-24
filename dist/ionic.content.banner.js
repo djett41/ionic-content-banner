@@ -76,6 +76,11 @@ angular.module('jett.ionic.content.banner', ['ionic']);
           // get the candidate active views
           var views = body.querySelectorAll('ion-view[nav-view="active"]');
 
+          // If the view is in ion-nav-view, instead of ion-view, it should just be div
+          if (views.length == 0) {
+            views = body.querySelectorAll('div[nav-view="active"]');
+          }
+
           // only one candidate, so we just take it
           if (views.length === 1) {
             return views[0];
