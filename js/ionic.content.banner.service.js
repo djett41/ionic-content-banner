@@ -61,6 +61,7 @@
             transition: 'vertical',
             interval: 7000,
             type: 'info',
+            href: '',
             $deregisterBackButton: angular.noop,
             closeOnStateChange: true,
             autoClose: null
@@ -68,7 +69,8 @@
 
           // Compile the template
           var classes = 'content-banner ' + scope.type + ' content-banner-transition-' + scope.transition;
-          var element = scope.element = $compile('<ion-content-banner class="' + classes + '"></ion-content-banner>')(scope);
+          var href = scope.href;
+          var element = scope.element = $compile('<ion-content-banner class="' + classes + '" href="' + href + '" ></ion-content-banner>')(scope);
           var body = $document[0].body;
 
           var stateChangeListenDone = scope.closeOnStateChange ?

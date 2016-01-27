@@ -26,6 +26,10 @@ $content-banner-info-bg: #333   !default;
   &.info {
     background-color: $content-banner-info-bg;
   }
+  .content-banner-text-wrapper {
+    text-decoration: none;
+    color: white;
+  }
   .content-banner-text {
     @include transition(opacity 500ms linear) ;
     position: absolute;
