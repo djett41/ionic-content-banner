@@ -16,6 +16,8 @@
       '$timeout',
       '$ionicPlatform',
       function ($document, $rootScope, $compile, $timeout, $ionicPlatform) {
+        var cacheIndex = 0,
+          bannerCache = {};
 
         function isActiveView (node) {
           // walk up the child-parent node chain until we get to the root or the BODY
@@ -47,6 +49,26 @@
           })[0];
         }
 
+        function cacheBanner(scope){
+          bannerCache[cacheIndex] = scope;
+          scope.bannerCacheIndex = cacheIndex;
+          cacheIndex ++;
+        }
+
+        /**
+         * @ngdoc method
+         * @name $ionicContentBanner#closeAll
+         * @description
+         * Closes all current banners
+         */
+        function closeAll(){
+          $timeout(function(){
+            angular.forEach(bannerCache, function(scope){
+              scope.close();
+            });
+          });
+        }
+
         /**
          * @ngdoc method
          * @name $ionicContentBanner#show
@@ -63,11 +85,20 @@
             type: 'info',
             $deregisterBackButton: angular.noop,
             closeOnStateChange: true,
-            autoClose: null
+            autoClose: null,
+            position: null
           }, opts);
 
           // Compile the template
-          var classes = 'content-banner ' + scope.type + ' content-banner-transition-' + scope.transition;
+          var transitionClass = 'content-banner-transition-' + scope.transition;
+          var classes = 'content-banner ' + scope.type;
+          if ( scope.position === 'bottom' ){
+            classes += ' content-banner-bottom';
+            if ( scope.transition === 'vertical' ){
+              transitionClass += '-bottom';
+            }
+          }
+          classes += ' ' + transitionClass;
           var element = scope.element = $compile('<ion-content-banner class="' + classes + '"></ion-content-banner>')(scope);
           var body = $document[0].body;
 
@@ -97,6 +128,8 @@
               }, 400);
             });
 
+            delete bannerCache[scope.bannerCacheIndex];
+
             scope.$deregisterBackButton();
             stateChangeListenDone();
           };
@@ -117,7 +150,7 @@
                     scope.close();
                   }, scope.autoClose, false);
                 }
-              }, 20, false);
+              }, 20);
             });
           };
 
@@ -129,11 +162,13 @@
           // Expose the scope on $ionContentBanner's return value for the sake of testing it.
           scope.close.$scope = scope;
 
+          cacheBanner(scope);
           return scope.close;
         }
 
         return {
-          show: contentBanner
+          show: contentBanner,
+          closeAll: closeAll
         };
       }]);
 

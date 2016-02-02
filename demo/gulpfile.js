@@ -222,7 +222,7 @@ gulp.task('index', ['jsHint', 'scripts'], function() {
 });
 
 gulp.task('serve', plugins.shell.task([
-  'ionic serve --lab'
+  'ionic serve -b'
 ]));
 
 // ionic emulate wrapper

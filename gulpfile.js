@@ -33,14 +33,9 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('sass', function(done) {
-  gulp.src('./scss/ionic.content.banner.scss')
-    /*
-      Since this is a plugin, we dont want to include ionic scss in dist.  Don't think there is a way to compile scss
-      using ionic vars/mixins without including it in the compiled file.
-      For now we need to manually add @import "../bower_components/ionic/scss/ionic"; to the scss file,
-      run this gulp task, remove ionic css in css file (inlcuding minified version), then remove the import in scss
-     */
+  gulp.src('./scss/main.scss')
     .pipe(sass({ errLogToConsole: true }))
+    .pipe(rename({  basename: 'ionic.content.banner' }))
     .pipe(gulp.dest(paths.dist))
     .pipe(minifyCss({ keepSpecialComments: 0 }))
     .pipe(rename({ extname: '.min.css' }))

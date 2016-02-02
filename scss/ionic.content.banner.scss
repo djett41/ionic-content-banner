@@ -1,5 +1,4 @@
 // Content Banner
-
 // Variables
 //-----------------------------------
 
@@ -19,12 +18,17 @@ $content-banner-info-bg: #333   !default;
   position: absolute;
   top: 0;
   opacity: $content-banner-opacity;
+  z-index: $z-index-loading;
 
   &.error {
     background-color: $content-banner-error-bg;
   }
   &.info {
     background-color: $content-banner-info-bg;
+  }
+  &.content-banner-bottom {
+    top: initial;
+    bottom: 0;
   }
   .content-banner-text {
     @include transition(opacity 500ms linear) ;
@@ -58,6 +62,11 @@ $content-banner-info-bg: #333   !default;
 .content-banner-transition-vertical {
   @include transition-transform(linear 250ms);
   @include translate3d(0, -100%, 0);
+}
+
+.content-banner-transition-vertical-bottom {
+  @include transition-transform(linear 250ms);
+  @include translate3d(0, 100%, 0);
 }
 
 .content-banner-transition-fade {
