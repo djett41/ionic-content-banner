@@ -101,7 +101,7 @@ A service you can inject in your controller to show the Content Banner
   
     Number of milliseconds before the content banner automatically closes.  This option is disabled by default.  
 
-  - `{boolean=}` `cancelOnStateChange`
+  - `{boolean=}` `closeOnStateChange`
 
     Whether to cancel the content banner when navigating to a new state.  Default value is true.
 
