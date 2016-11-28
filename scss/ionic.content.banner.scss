@@ -16,8 +16,8 @@ $content-banner-info-bg: #333   !default;
   color: white;
   height: $content-banner-height;
   line-height: $content-banner-height;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 40px;
   opacity: $content-banner-opacity;
 
   &.error {
@@ -53,6 +53,10 @@ $content-banner-info-bg: #333   !default;
       line-height: $content-banner-height;
     }
   }
+}
+
+.platform-ios .content-banner {
+  top: 60px;
 }
 
 .content-banner-transition-vertical {
