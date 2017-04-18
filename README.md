@@ -1,4 +1,4 @@
-#Ionic Content Banner
+# Ionic Content Banner
 >A Facebook style info/error content banner for the Ionic Framework
 
 ## Table of Contents
